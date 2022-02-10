@@ -10,4 +10,5 @@ import Foundation
 struct AttributesModel: Codable {
     var cryptocoins: [CryptoModel]
     var commodities: [CryptoModel]
+    var fiats: [FiatModel]
 }

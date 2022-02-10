@@ -24,6 +24,8 @@
 		7520310527B5788000540462 /* CryptoAttributesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520310427B5788000540462 /* CryptoAttributesModel.swift */; };
 		7520310727B5791D00540462 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520310627B5791D00540462 /* CryptoModel.swift */; };
 		7520310B27B57B4A00540462 /* AttributesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520310A27B57B4A00540462 /* AttributesModel.swift */; };
+		7520310D27B57F6400540462 /* FiatAttributesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520310C27B57F6400540462 /* FiatAttributesModel.swift */; };
+		7520310F27B5803C00540462 /* FiatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520310E27B5803C00540462 /* FiatModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		7520310427B5788000540462 /* CryptoAttributesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAttributesModel.swift; sourceTree = "<group>"; };
 		7520310627B5791D00540462 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
 		7520310A27B57B4A00540462 /* AttributesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesModel.swift; sourceTree = "<group>"; };
+		7520310C27B57F6400540462 /* FiatAttributesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatAttributesModel.swift; sourceTree = "<group>"; };
+		7520310E27B5803C00540462 /* FiatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,8 @@
 				7520310427B5788000540462 /* CryptoAttributesModel.swift */,
 				7520310627B5791D00540462 /* CryptoModel.swift */,
 				7520310A27B57B4A00540462 /* AttributesModel.swift */,
+				7520310C27B57F6400540462 /* FiatAttributesModel.swift */,
+				7520310E27B5803C00540462 /* FiatModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,9 +316,11 @@
 				7520310527B5788000540462 /* CryptoAttributesModel.swift in Sources */,
 				752030FE27B5683E00540462 /* MasterDataViewModel.swift in Sources */,
 				7520310B27B57B4A00540462 /* AttributesModel.swift in Sources */,
+				7520310F27B5803C00540462 /* FiatModel.swift in Sources */,
 				752030CB27B563C000540462 /* ViewController.swift in Sources */,
 				7520310727B5791D00540462 /* CryptoModel.swift in Sources */,
 				7520310327B5773400540462 /* MainDataModel.swift in Sources */,
+				7520310D27B57F6400540462 /* FiatAttributesModel.swift in Sources */,
 				752030C727B563C000540462 /* AppDelegate.swift in Sources */,
 				7520310127B569BB00540462 /* MasterDataModel.swift in Sources */,
 				752030FB27B5664500540462 /* FileLoader.swift in Sources */,
