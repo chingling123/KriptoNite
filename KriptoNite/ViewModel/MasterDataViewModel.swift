@@ -13,7 +13,7 @@ class MasterDataViewModel {
     func fetchData() {
         guard let data = FileLoader.loadData() else { return }
         let decoder = JSONDecoder()
-        
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         do {
             masterData = try decoder.decode(MasterDataModel.self, from: data)
         } catch {

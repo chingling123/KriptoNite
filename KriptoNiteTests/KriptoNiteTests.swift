@@ -35,4 +35,8 @@ class KriptoNiteTests: XCTestCase {
         XCTAssertNotNil(sut.masterData?.mainData)
     }
 
+    func testViewModelMasterDataAttributes() throws {
+        sut.fetchData()
+        XCTAssertNotNil(sut.masterData?.mainData.attributes)
+    }
 }

@@ -9,4 +9,5 @@ import Foundation
 
 struct MainDataModel: Codable {
     var type: String
+    var attributes: AttributesModel
 }
