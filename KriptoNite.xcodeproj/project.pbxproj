@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		752030C727B563C000540462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030C627B563C000540462 /* AppDelegate.swift */; };
 		752030C927B563C000540462 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030C827B563C000540462 /* SceneDelegate.swift */; };
-		752030CB27B563C000540462 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030CA27B563C000540462 /* ViewController.swift */; };
-		752030CE27B563C000540462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752030CC27B563C000540462 /* Main.storyboard */; };
+		752030CB27B563C000540462 /* CriptosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030CA27B563C000540462 /* CriptosViewController.swift */; };
 		752030D027B563C000540462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752030CF27B563C000540462 /* Assets.xcassets */; };
 		752030D327B563C000540462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752030D127B563C000540462 /* LaunchScreen.storyboard */; };
 		752030DE27B563C000540462 /* KriptoNiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030DD27B563C000540462 /* KriptoNiteTests.swift */; };
@@ -53,8 +52,7 @@
 		752030C327B563BF00540462 /* KriptoNite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KriptoNite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		752030C627B563C000540462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		752030C827B563C000540462 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		752030CA27B563C000540462 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		752030CD27B563C000540462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		752030CA27B563C000540462 /* CriptosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptosViewController.swift; sourceTree = "<group>"; };
 		752030CF27B563C000540462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		752030D227B563C000540462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		752030D427B563C000540462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,13 +125,12 @@
 		752030C527B563BF00540462 /* KriptoNite */ = {
 			isa = PBXGroup;
 			children = (
+				7520311827B5870E00540462 /* View */,
 				752030FF27B5696F00540462 /* Model */,
 				752030FC27B5682800540462 /* ViewModel */,
 				752030F627B563E100540462 /* Resources */,
 				752030C627B563C000540462 /* AppDelegate.swift */,
 				752030C827B563C000540462 /* SceneDelegate.swift */,
-				752030CA27B563C000540462 /* ViewController.swift */,
-				752030CC27B563C000540462 /* Main.storyboard */,
 				752030CF27B563C000540462 /* Assets.xcassets */,
 				752030D127B563C000540462 /* LaunchScreen.storyboard */,
 				752030D427B563C000540462 /* Info.plist */,
@@ -191,6 +188,14 @@
 				7520311627B5835900540462 /* FiatWalletModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7520311827B5870E00540462 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				752030CA27B563C000540462 /* CriptosViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +305,6 @@
 				752030F827B563E900540462 /* Masterdata.json in Resources */,
 				752030D327B563C000540462 /* LaunchScreen.storyboard in Resources */,
 				752030D027B563C000540462 /* Assets.xcassets in Resources */,
-				752030CE27B563C000540462 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +333,7 @@
 				752030FE27B5683E00540462 /* MasterDataViewModel.swift in Sources */,
 				7520310B27B57B4A00540462 /* AttributesModel.swift in Sources */,
 				7520310F27B5803C00540462 /* FiatModel.swift in Sources */,
-				752030CB27B563C000540462 /* ViewController.swift in Sources */,
+				752030CB27B563C000540462 /* CriptosViewController.swift in Sources */,
 				7520310727B5791D00540462 /* CryptoModel.swift in Sources */,
 				7520311527B5832400540462 /* FiatWalletAttributesModel.swift in Sources */,
 				7520310327B5773400540462 /* MainDataModel.swift in Sources */,
@@ -377,14 +381,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		752030CC27B563C000540462 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				752030CD27B563C000540462 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		752030D127B563C000540462 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -524,7 +520,6 @@
 				INFOPLIST_FILE = KriptoNite/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -552,7 +547,6 @@
 				INFOPLIST_FILE = KriptoNite/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
