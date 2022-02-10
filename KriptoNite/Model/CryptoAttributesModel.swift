@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CryptocoinsAttributesModel: Codable {
+struct CryptoAttributesModel: Codable {
     var symbol: String
     var name: String
     var avgPrice: String

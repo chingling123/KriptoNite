@@ -21,6 +21,9 @@
 		752030FE27B5683E00540462 /* MasterDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030FD27B5683E00540462 /* MasterDataViewModel.swift */; };
 		7520310127B569BB00540462 /* MasterDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520310027B569BB00540462 /* MasterDataModel.swift */; };
 		7520310327B5773400540462 /* MainDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520310227B5773400540462 /* MainDataModel.swift */; };
+		7520310527B5788000540462 /* CryptoAttributesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520310427B5788000540462 /* CryptoAttributesModel.swift */; };
+		7520310727B5791D00540462 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520310627B5791D00540462 /* CryptoModel.swift */; };
+		7520310B27B57B4A00540462 /* AttributesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520310A27B57B4A00540462 /* AttributesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		752030FD27B5683E00540462 /* MasterDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDataViewModel.swift; sourceTree = "<group>"; };
 		7520310027B569BB00540462 /* MasterDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDataModel.swift; sourceTree = "<group>"; };
 		7520310227B5773400540462 /* MainDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataModel.swift; sourceTree = "<group>"; };
+		7520310427B5788000540462 /* CryptoAttributesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAttributesModel.swift; sourceTree = "<group>"; };
+		7520310627B5791D00540462 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		7520310A27B57B4A00540462 /* AttributesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,9 @@
 			children = (
 				7520310027B569BB00540462 /* MasterDataModel.swift */,
 				7520310227B5773400540462 /* MainDataModel.swift */,
+				7520310427B5788000540462 /* CryptoAttributesModel.swift */,
+				7520310627B5791D00540462 /* CryptoModel.swift */,
+				7520310A27B57B4A00540462 /* AttributesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,8 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7520310527B5788000540462 /* CryptoAttributesModel.swift in Sources */,
 				752030FE27B5683E00540462 /* MasterDataViewModel.swift in Sources */,
+				7520310B27B57B4A00540462 /* AttributesModel.swift in Sources */,
 				752030CB27B563C000540462 /* ViewController.swift in Sources */,
+				7520310727B5791D00540462 /* CryptoModel.swift in Sources */,
 				7520310327B5773400540462 /* MainDataModel.swift in Sources */,
 				752030C727B563C000540462 /* AppDelegate.swift in Sources */,
 				7520310127B569BB00540462 /* MasterDataModel.swift in Sources */,

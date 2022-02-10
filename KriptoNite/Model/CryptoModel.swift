@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct CryptocoinsModel: Codable {
+struct CryptoModel: Codable {
     var type: String
-    var attributes: CryptocoinsAttributesModel
+    var attributes: CryptoAttributesModel
     var id: String
 }

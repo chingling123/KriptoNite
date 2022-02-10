@@ -8,5 +8,6 @@
 import Foundation
 
 struct AttributesModel: Codable {
-    var cryptocoins: [CryptocoinsModel]
+    var cryptocoins: [CryptoModel]
+    var commodities: [CryptoModel]
 }
