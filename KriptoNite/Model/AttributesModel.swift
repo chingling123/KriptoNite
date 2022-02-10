@@ -17,7 +17,7 @@ enum AttributesType: String, Codable {
 struct AttributesModel: Codable {
     var cryptocoins: [CriptoModel]
     var commodities: [CriptoModel]
-    var fiats: [FiatModel]
+    var fiats: [CriptoModel]
     var wallets: [WalletModel]
     var commodityWallets: [WalletModel]
     var fiatwallets: [FiatWalletModel]
