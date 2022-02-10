@@ -8,12 +8,16 @@
 import UIKit
 
 class CriptosViewController: UIViewController {
+    private let cellId = "criptoCell"
     private var viewModel: CriptosViewModelProtocol
     private lazy var tableview: UITableView = {
         let tableView = UITableView()
+        tableView.register(CriptoTableViewCell.self, forCellReuseIdentifier: cellId)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
        return tableView
     }()
     
@@ -28,7 +32,6 @@ class CriptosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
         addViews()
     }
     
@@ -39,25 +42,19 @@ class CriptosViewController: UIViewController {
 }
 
 extension CriptosViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 64
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return viewModel.data?.mainData.attributes.cryptocoins.count ?? 0
-        case 1:
-            return viewModel.data?.mainData.attributes.commodities.count ?? 0
-        case 2:
-            return viewModel.data?.mainData.attributes.fiats.count ?? 0
-        default:
-            return 0
-        }
+        return viewModel.data?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CriptoTableViewCell else { return UITableViewCell() }
+
+        guard let data = viewModel.data?[indexPath.row] else { return UITableViewCell() }
+        cell.configureView(data: data)
+        return cell
     }
 }
 

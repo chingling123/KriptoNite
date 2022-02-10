@@ -8,6 +8,6 @@
 import Foundation
 
 protocol CriptosViewModelProtocol {
-    var data: MasterDataModel? { get }
+    var data: [CriptoModel]? { get }
     func fetchData()
 }

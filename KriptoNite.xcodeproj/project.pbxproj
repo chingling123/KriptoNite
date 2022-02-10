@@ -31,6 +31,9 @@
 		7520311F27B5A5D500540462 /* CriptosViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520311E27B5A5D500540462 /* CriptosViewModelProtocol.swift */; };
 		7520312227B5AB3C00540462 /* ViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520312127B5AB3C00540462 /* ViewModelMock.swift */; };
 		7520312427B5B17500540462 /* CriptosViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520312327B5B17500540462 /* CriptosViewControllerTests.swift */; };
+		7520312627B5B8D800540462 /* CriptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520312527B5B8D800540462 /* CriptoTableViewCell.swift */; };
+		7520312F27B5C17B00540462 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 7520312E27B5C17B00540462 /* SDWebImageSVGCoder */; };
+		7520313327B5CBF600540462 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520313227B5CBF600540462 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,8 @@
 		7520311E27B5A5D500540462 /* CriptosViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptosViewModelProtocol.swift; sourceTree = "<group>"; };
 		7520312127B5AB3C00540462 /* ViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelMock.swift; sourceTree = "<group>"; };
 		7520312327B5B17500540462 /* CriptosViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptosViewControllerTests.swift; sourceTree = "<group>"; };
+		7520312527B5B8D800540462 /* CriptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoTableViewCell.swift; sourceTree = "<group>"; };
+		7520313227B5CBF600540462 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7520312F27B5C17B00540462 /* SDWebImageSVGCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +135,7 @@
 		752030C527B563BF00540462 /* KriptoNite */ = {
 			isa = PBXGroup;
 			children = (
+				7520313127B5CBE800540462 /* Extensions */,
 				7520311B27B5A58200540462 /* Protocols */,
 				7520311827B5870E00540462 /* View */,
 				752030FF27B5696F00540462 /* Model */,
@@ -199,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				752030CA27B563C000540462 /* CriptosViewController.swift */,
+				7520312527B5B8D800540462 /* CriptoTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +228,14 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		7520313127B5CBE800540462 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7520313227B5CBF600540462 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,6 +252,9 @@
 			dependencies = (
 			);
 			name = KriptoNite;
+			packageProductDependencies = (
+				7520312E27B5C17B00540462 /* SDWebImageSVGCoder */,
+			);
 			productName = KriptoNite;
 			productReference = 752030C327B563BF00540462 /* KriptoNite.app */;
 			productType = "com.apple.product-type.application";
@@ -308,6 +327,9 @@
 				Base,
 			);
 			mainGroup = 752030BA27B563BF00540462;
+			packageReferences = (
+				7520312D27B5C17A00540462 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
+			);
 			productRefGroup = 752030C427B563BF00540462 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -355,8 +377,10 @@
 				752030FE27B5683E00540462 /* MasterDataViewModel.swift in Sources */,
 				7520310B27B57B4A00540462 /* AttributesModel.swift in Sources */,
 				752030CB27B563C000540462 /* CriptosViewController.swift in Sources */,
+				7520313327B5CBF600540462 /* String+Extensions.swift in Sources */,
 				7520311F27B5A5D500540462 /* CriptosViewModelProtocol.swift in Sources */,
 				7520310727B5791D00540462 /* CriptoModel.swift in Sources */,
+				7520312627B5B8D800540462 /* CriptoTableViewCell.swift in Sources */,
 				7520311527B5832400540462 /* FiatWalletAttributesModel.swift in Sources */,
 				7520310327B5773400540462 /* MainDataModel.swift in Sources */,
 				7520311327B5822B00540462 /* WalletAttributesModel.swift in Sources */,
@@ -702,6 +726,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7520312D27B5C17A00540462 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7520312E27B5C17B00540462 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7520312D27B5C17A00540462 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 752030BB27B563BF00540462 /* Project object */;
 }

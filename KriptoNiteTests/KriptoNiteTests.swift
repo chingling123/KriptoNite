@@ -32,11 +32,13 @@ class KriptoNiteTests: XCTestCase {
     
     func testLoadMasterDataFromLocaFileToModel() throws {
         sut.fetchData()
-        XCTAssertNotNil(sut.data?.mainData)
+        XCTAssertNotNil(sut.data)
     }
 
     func testViewModelMasterDataAttributes() throws {
         sut.fetchData()
-        XCTAssertNotNil(sut.data?.mainData.attributes)
+        XCTAssertNotNil(sut.data)
+        let data = sut.data
+        XCTAssertNotNil(data?[0].attributes)
     }
 }

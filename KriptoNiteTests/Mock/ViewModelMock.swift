@@ -13,7 +13,7 @@ class ViewModelMock {
 }
 
 extension ViewModelMock: CriptosViewModelProtocol {
-    var data: MasterDataModel? {
+    var data: [CriptoModel]? {
         return nil
     }
     

@@ -23,8 +23,9 @@ class MasterDataViewModel {
 }
 
 extension MasterDataViewModel: CriptosViewModelProtocol {
-    var data: MasterDataModel? {
-        return masterData
+    var data: [CriptoModel]? {
+        guard let hasData = masterData else { return nil }
+        return hasData.mainData.attributes.cryptocoins + hasData.mainData.attributes.commodities + hasData.mainData.attributes.fiats.filter { $0.attributes.hasWallets == true }
     }
     
     func fetchData() {
