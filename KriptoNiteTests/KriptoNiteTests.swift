@@ -27,16 +27,16 @@ class KriptoNiteTests: XCTestCase {
     
     func testLoadMasterDataFromLocalFile() throws {
         sut.fetchData()
-        XCTAssertNotNil(sut.masterData)
+        XCTAssertNotNil(sut.data)
     }
     
     func testLoadMasterDataFromLocaFileToModel() throws {
         sut.fetchData()
-        XCTAssertNotNil(sut.masterData?.mainData)
+        XCTAssertNotNil(sut.data?.mainData)
     }
 
     func testViewModelMasterDataAttributes() throws {
         sut.fetchData()
-        XCTAssertNotNil(sut.masterData?.mainData.attributes)
+        XCTAssertNotNil(sut.data?.mainData.attributes)
     }
 }

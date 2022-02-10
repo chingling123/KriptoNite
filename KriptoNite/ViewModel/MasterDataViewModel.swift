@@ -8,9 +8,9 @@
 import Foundation
 
 class MasterDataViewModel {
-    var masterData: MasterDataModel?
+    private var masterData: MasterDataModel?
     
-    func fetchData() {
+    private func fetch() {
         guard let data = FileLoader.loadData() else { return }
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -19,5 +19,15 @@ class MasterDataViewModel {
         } catch {
             print("Failed to decode JSON")
         }
+    }
+}
+
+extension MasterDataViewModel: CriptosViewModelProtocol {
+    var data: MasterDataModel? {
+        return masterData
+    }
+    
+    func fetchData() {
+        fetch()
     }
 }

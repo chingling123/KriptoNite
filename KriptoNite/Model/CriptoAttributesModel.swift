@@ -1,5 +1,5 @@
 //
-//  CryptocoinsAttributesModel.swift
+//  CriptocoinsAttributesModel.swift
 //  KriptoNite
 //
 //  Created by Erik Nascimento on 10/02/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CryptoAttributesModel: Codable {
+struct CriptoAttributesModel: Codable {
     var symbol: String
     var name: String
     var avgPrice: String

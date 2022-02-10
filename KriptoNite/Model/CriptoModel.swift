@@ -1,5 +1,5 @@
 //
-//  FiatModel.swift
+//  CriptocoinsModel.swift
 //  KriptoNite
 //
 //  Created by Erik Nascimento on 10/02/2022.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct FiatModel: Codable {
+struct CriptoModel: Codable {
     var type: AttributesType
-    var attributes: FiatAttributesModel
+    var attributes: CriptoAttributesModel
     var id: String
 }

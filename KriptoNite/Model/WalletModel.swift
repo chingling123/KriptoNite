@@ -8,7 +8,7 @@
 import Foundation
 
 struct WalletModel: Codable {
-    var type: String
+    var type: AttributesType
     var attributes: WalletAttributesModel
     var id: String
 }
