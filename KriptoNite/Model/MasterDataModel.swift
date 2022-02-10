@@ -8,5 +8,9 @@
 import Foundation
 
 struct MasterDataModel: Codable {
-    var type: String
+    var mainData: MainDataModel
+    
+    private enum CodingKeys: String, CodingKey {
+        case mainData = "data"
+    }
 }

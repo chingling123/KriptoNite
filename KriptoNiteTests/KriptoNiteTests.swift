@@ -11,7 +11,7 @@ import XCTest
 class KriptoNiteTests: XCTestCase {
     var data: Data?
     var sut: MasterDataViewModel!
-    
+        
     override func setUpWithError() throws {
         data = FileLoader.loadData()
         sut = MasterDataViewModel()
@@ -32,7 +32,7 @@ class KriptoNiteTests: XCTestCase {
     
     func testLoadMasterDataFromLocaFileToModel() throws {
         sut.fetchData()
-        XCTAssertNotNil(sut.masterData)
+        XCTAssertNotNil(sut.masterData?.mainData)
     }
 
 }
