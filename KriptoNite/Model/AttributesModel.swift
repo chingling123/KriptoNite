@@ -11,4 +11,7 @@ struct AttributesModel: Codable {
     var cryptocoins: [CryptoModel]
     var commodities: [CryptoModel]
     var fiats: [FiatModel]
+    var wallets: [WalletModel]
+    var commodityWallets: [WalletModel]
+    var fiatwallets: [FiatWalletModel]
 }
