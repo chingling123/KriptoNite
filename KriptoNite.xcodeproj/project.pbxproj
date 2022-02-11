@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		752030C727B563C000540462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030C627B563C000540462 /* AppDelegate.swift */; };
-		752030C927B563C000540462 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030C827B563C000540462 /* SceneDelegate.swift */; };
 		752030CB27B563C000540462 /* CriptosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030CA27B563C000540462 /* CriptosViewController.swift */; };
 		752030D027B563C000540462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752030CF27B563C000540462 /* Assets.xcassets */; };
 		752030D327B563C000540462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752030D127B563C000540462 /* LaunchScreen.storyboard */; };
@@ -56,11 +55,9 @@
 /* Begin PBXFileReference section */
 		752030C327B563BF00540462 /* KriptoNite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KriptoNite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		752030C627B563C000540462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		752030C827B563C000540462 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		752030CA27B563C000540462 /* CriptosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptosViewController.swift; sourceTree = "<group>"; };
 		752030CF27B563C000540462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		752030D227B563C000540462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		752030D427B563C000540462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		752030D927B563C000540462 /* KriptoNiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KriptoNiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		752030DD27B563C000540462 /* KriptoNiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KriptoNiteTests.swift; sourceTree = "<group>"; };
 		752030E327B563C000540462 /* KriptoNiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KriptoNiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,10 +139,8 @@
 				752030FC27B5682800540462 /* ViewModel */,
 				752030F627B563E100540462 /* Resources */,
 				752030C627B563C000540462 /* AppDelegate.swift */,
-				752030C827B563C000540462 /* SceneDelegate.swift */,
 				752030CF27B563C000540462 /* Assets.xcassets */,
 				752030D127B563C000540462 /* LaunchScreen.storyboard */,
-				752030D427B563C000540462 /* Info.plist */,
 			);
 			path = KriptoNite;
 			sourceTree = "<group>";
@@ -389,7 +384,6 @@
 				7520310127B569BB00540462 /* MasterDataModel.swift in Sources */,
 				752030FB27B5664500540462 /* FileLoader.swift in Sources */,
 				7520311727B5835900540462 /* FiatWalletModel.swift in Sources */,
-				752030C927B563C000540462 /* SceneDelegate.swift in Sources */,
 				7520311D27B5A59300540462 /* CriptosViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

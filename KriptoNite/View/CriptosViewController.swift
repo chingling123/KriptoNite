@@ -22,6 +22,13 @@ class CriptosViewController: UIViewController {
         tableView.estimatedRowHeight = 84
        return tableView
     }()
+    private lazy var segmentedTypes: UISegmentedControl = {
+        let segment = UISegmentedControl(items: ["All", "Cryptocoins", "Commodities", "Fiats"])
+        segment.translatesAutoresizingMaskIntoConstraints = false
+        segment.addTarget(self, action: #selector(self.segmentedValueChanged(_:)), for: .valueChanged)
+        segment.selectedSegmentIndex = 0
+        return segment
+    }()
     
     init(vm: CriptosViewModelProtocol) {
         viewModel = vm
@@ -34,6 +41,8 @@ class CriptosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        title = "Cryptos"
         addViews()
     }
     
@@ -65,14 +74,24 @@ extension CriptosViewController: CriptosViewProtocol {
 
 private extension CriptosViewController {
     func addViews() {
+        view.addSubview(segmentedTypes)
         view.addSubview(tableview)
         makeConstraints()
     }
     
     func makeConstraints() {
+        segmentedTypes.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        segmentedTypes.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
+        segmentedTypes.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
+        segmentedTypes.heightAnchor.constraint(equalToConstant: 30).isActive = true
         tableview.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        tableview.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableview.topAnchor.constraint(equalTo: segmentedTypes.bottomAnchor, constant: 10).isActive = true
         tableview.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    @objc func segmentedValueChanged(_ sender:UISegmentedControl!)
+    {
+        
     }
 }
