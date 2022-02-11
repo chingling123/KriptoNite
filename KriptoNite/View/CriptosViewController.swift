@@ -59,7 +59,6 @@ extension CriptosViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CriptoTableViewCell else { return UITableViewCell() }
-
         guard let data = viewModel.data?[indexPath.row] else { return UITableViewCell() }
         cell.configureView(data: data)
         return cell

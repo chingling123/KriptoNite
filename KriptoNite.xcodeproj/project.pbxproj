@@ -12,8 +12,6 @@
 		752030D027B563C000540462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752030CF27B563C000540462 /* Assets.xcassets */; };
 		752030D327B563C000540462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752030D127B563C000540462 /* LaunchScreen.storyboard */; };
 		752030DE27B563C000540462 /* KriptoNiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030DD27B563C000540462 /* KriptoNiteTests.swift */; };
-		752030E827B563C000540462 /* KriptoNiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030E727B563C000540462 /* KriptoNiteUITests.swift */; };
-		752030EA27B563C000540462 /* KriptoNiteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030E927B563C000540462 /* KriptoNiteUITestsLaunchTests.swift */; };
 		752030F827B563E900540462 /* Masterdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 752030F727B563E900540462 /* Masterdata.json */; };
 		752030FB27B5664500540462 /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030FA27B5664500540462 /* FileLoader.swift */; };
 		752030FE27B5683E00540462 /* MasterDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752030FD27B5683E00540462 /* MasterDataViewModel.swift */; };
@@ -43,13 +41,6 @@
 			remoteGlobalIDString = 752030C227B563BF00540462;
 			remoteInfo = KriptoNite;
 		};
-		752030E427B563C000540462 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 752030BB27B563BF00540462 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 752030C227B563BF00540462;
-			remoteInfo = KriptoNite;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -60,9 +51,6 @@
 		752030D227B563C000540462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		752030D927B563C000540462 /* KriptoNiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KriptoNiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		752030DD27B563C000540462 /* KriptoNiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KriptoNiteTests.swift; sourceTree = "<group>"; };
-		752030E327B563C000540462 /* KriptoNiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KriptoNiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		752030E727B563C000540462 /* KriptoNiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KriptoNiteUITests.swift; sourceTree = "<group>"; };
-		752030E927B563C000540462 /* KriptoNiteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KriptoNiteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		752030F727B563E900540462 /* Masterdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Masterdata.json; sourceTree = "<group>"; };
 		752030FA27B5664500540462 /* FileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
 		752030FD27B5683E00540462 /* MasterDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDataViewModel.swift; sourceTree = "<group>"; };
@@ -99,13 +87,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		752030E027B563C000540462 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -114,7 +95,6 @@
 			children = (
 				752030C527B563BF00540462 /* KriptoNite */,
 				752030DC27B563C000540462 /* KriptoNiteTests */,
-				752030E627B563C000540462 /* KriptoNiteUITests */,
 				752030C427B563BF00540462 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,7 +104,6 @@
 			children = (
 				752030C327B563BF00540462 /* KriptoNite.app */,
 				752030D927B563C000540462 /* KriptoNiteTests.xctest */,
-				752030E327B563C000540462 /* KriptoNiteUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,15 +132,6 @@
 				7520312327B5B17500540462 /* CriptosViewControllerTests.swift */,
 			);
 			path = KriptoNiteTests;
-			sourceTree = "<group>";
-		};
-		752030E627B563C000540462 /* KriptoNiteUITests */ = {
-			isa = PBXGroup;
-			children = (
-				752030E727B563C000540462 /* KriptoNiteUITests.swift */,
-				752030E927B563C000540462 /* KriptoNiteUITestsLaunchTests.swift */,
-			);
-			path = KriptoNiteUITests;
 			sourceTree = "<group>";
 		};
 		752030F627B563E100540462 /* Resources */ = {
@@ -272,24 +242,6 @@
 			productReference = 752030D927B563C000540462 /* KriptoNiteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		752030E227B563C000540462 /* KriptoNiteUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 752030F327B563C000540462 /* Build configuration list for PBXNativeTarget "KriptoNiteUITests" */;
-			buildPhases = (
-				752030DF27B563C000540462 /* Sources */,
-				752030E027B563C000540462 /* Frameworks */,
-				752030E127B563C000540462 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				752030E527B563C000540462 /* PBXTargetDependency */,
-			);
-			name = KriptoNiteUITests;
-			productName = KriptoNiteUITests;
-			productReference = 752030E327B563C000540462 /* KriptoNiteUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -304,10 +256,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					752030D827B563C000540462 = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 752030C227B563BF00540462;
-					};
-					752030E227B563C000540462 = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 752030C227B563BF00540462;
 					};
@@ -331,7 +279,6 @@
 			targets = (
 				752030C227B563BF00540462 /* KriptoNite */,
 				752030D827B563C000540462 /* KriptoNiteTests */,
-				752030E227B563C000540462 /* KriptoNiteUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -348,13 +295,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		752030D727B563C000540462 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		752030E127B563C000540462 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,15 +338,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		752030DF27B563C000540462 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				752030E827B563C000540462 /* KriptoNiteUITests.swift in Sources */,
-				752030EA27B563C000540462 /* KriptoNiteUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -414,11 +345,6 @@
 			isa = PBXTargetDependency;
 			target = 752030C227B563BF00540462 /* KriptoNite */;
 			targetProxy = 752030DA27B563C000540462 /* PBXContainerItemProxy */;
-		};
-		752030E527B563C000540462 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 752030C227B563BF00540462 /* KriptoNite */;
-			targetProxy = 752030E427B563C000540462 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -644,42 +570,6 @@
 			};
 			name = Release;
 		};
-		752030F427B563C000540462 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MCCVY9872B;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nascimento.erik.KriptoNiteUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KriptoNite;
-			};
-			name = Debug;
-		};
-		752030F527B563C000540462 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MCCVY9872B;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nascimento.erik.KriptoNiteUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KriptoNite;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -706,15 +596,6 @@
 			buildConfigurations = (
 				752030F127B563C000540462 /* Debug */,
 				752030F227B563C000540462 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		752030F327B563C000540462 /* Build configuration list for PBXNativeTarget "KriptoNiteUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				752030F427B563C000540462 /* Debug */,
-				752030F527B563C000540462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
