@@ -30,6 +30,7 @@
 		7520312627B5B8D800540462 /* CriptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520312527B5B8D800540462 /* CriptoTableViewCell.swift */; };
 		7520312F27B5C17B00540462 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 7520312E27B5C17B00540462 /* SDWebImageSVGCoder */; };
 		7520313327B5CBF600540462 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520313227B5CBF600540462 /* String+Extensions.swift */; };
+		75EC7C0827B6D702003D2DFA /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EC7C0727B6D702003D2DFA /* WalletViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		7520312327B5B17500540462 /* CriptosViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptosViewControllerTests.swift; sourceTree = "<group>"; };
 		7520312527B5B8D800540462 /* CriptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoTableViewCell.swift; sourceTree = "<group>"; };
 		7520313227B5CBF600540462 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		75EC7C0727B6D702003D2DFA /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				752030CA27B563C000540462 /* CriptosViewController.swift */,
 				7520312527B5B8D800540462 /* CriptoTableViewCell.swift */,
+				75EC7C0727B6D702003D2DFA /* WalletViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				7520310B27B57B4A00540462 /* AttributesModel.swift in Sources */,
 				752030CB27B563C000540462 /* CriptosViewController.swift in Sources */,
 				7520313327B5CBF600540462 /* String+Extensions.swift in Sources */,
+				75EC7C0827B6D702003D2DFA /* WalletViewController.swift in Sources */,
 				7520311F27B5A5D500540462 /* CriptosViewModelProtocol.swift in Sources */,
 				7520310727B5791D00540462 /* CriptoModel.swift in Sources */,
 				7520312627B5B8D800540462 /* CriptoTableViewCell.swift in Sources */,
