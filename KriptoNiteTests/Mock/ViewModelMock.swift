@@ -17,7 +17,7 @@ extension ViewModelMock: CriptosViewModelProtocol {
         return nil
     }
     
-    func fetchData() {
+    func fetchData(filter: AttributesType?) {
         dataFetched = true
     }
 }

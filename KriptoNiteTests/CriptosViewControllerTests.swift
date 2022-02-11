@@ -25,5 +25,4 @@ class CriptosViewControllerTests: XCTestCase {
         sut.viewWillAppear(true)
         XCTAssertTrue(vm.dataFetched)
     }
-
 }

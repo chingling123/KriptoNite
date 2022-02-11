@@ -26,19 +26,36 @@ class KriptoNiteTests: XCTestCase {
     }
     
     func testLoadMasterDataFromLocalFile() throws {
-        sut.fetchData()
+        sut.fetchData(filter: nil)
         XCTAssertNotNil(sut.data)
     }
     
     func testLoadMasterDataFromLocaFileToModel() throws {
-        sut.fetchData()
+        sut.fetchData(filter: nil)
         XCTAssertNotNil(sut.data)
     }
 
     func testViewModelMasterDataAttributes() throws {
-        sut.fetchData()
+        sut.fetchData(filter: nil)
         XCTAssertNotNil(sut.data)
         let data = sut.data
         XCTAssertNotNil(data?[0].attributes)
+    }
+    
+    func testViewModelMasterDataFilter() throws {
+        sut.fetchData(filter: .cryptocoin)
+        XCTAssertNotNil(sut.data)
+        var data = sut.data
+        XCTAssertTrue(data?[0].type == .cryptocoin)
+        
+        sut.fetchData(filter: .fiat)
+        XCTAssertNotNil(sut.data)
+        data = sut.data
+        XCTAssertTrue(data?[0].type == .fiat)
+        
+        sut.fetchData(filter: .commodity)
+        XCTAssertNotNil(sut.data)
+        data = sut.data
+        XCTAssertTrue(data?[0].type == .commodity)
     }
 }

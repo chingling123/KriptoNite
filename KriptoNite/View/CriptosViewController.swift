@@ -48,7 +48,7 @@ class CriptosViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.fetchData()
+        viewModel.fetchData(filter: nil)
     }
 }
 

@@ -9,5 +9,5 @@ import Foundation
 
 protocol CriptosViewModelProtocol {
     var data: [CriptoModel]? { get }
-    func fetchData()
+    func fetchData(filter: AttributesType?)
 }
