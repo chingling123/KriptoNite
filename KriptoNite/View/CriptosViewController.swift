@@ -18,6 +18,8 @@ class CriptosViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 84
        return tableView
     }()
     
@@ -42,9 +44,6 @@ class CriptosViewController: UIViewController {
 }
 
 extension CriptosViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 64
-    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.data?.count ?? 0
     }
