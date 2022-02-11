@@ -43,10 +43,14 @@ extension MasterDataViewModel: CriptosViewModelProtocol {
         }
     }
     
-    var commonWalletData: [WalletModel]? {
+    var commodityWalletData: [WalletModel]? {
         guard let hasData = masterData else { return nil }
-        return  hasData.mainData.attributes.wallets.filter { $0.attributes.deleted == false }.sorted { $0.attributes.balance > $1.attributes.balance } +
-                hasData.mainData.attributes.commodityWallets.filter { $0.attributes.deleted == false }.sorted { $0.attributes.balance > $1.attributes.balance }
+        return hasData.mainData.attributes.commodityWallets.filter { $0.attributes.deleted == false }.sorted { $0.attributes.balance > $1.attributes.balance }
+    }
+    
+    var walletData: [WalletModel]? {
+        guard let hasData = masterData else { return nil }
+        return hasData.mainData.attributes.wallets.filter { $0.attributes.deleted == false }.sorted { $0.attributes.balance > $1.attributes.balance }
     }
     
     var fiatWalletData: [FiatWalletModel]? {

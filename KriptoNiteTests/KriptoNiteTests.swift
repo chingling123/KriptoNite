@@ -61,7 +61,8 @@ class KriptoNiteTests: XCTestCase {
     
     func testViewModelMasterDataWallets() throws {
         sut.fetchData(filter: nil)
-        XCTAssertNotNil(sut.commonWalletData)
+        XCTAssertNotNil(sut.commodityWalletData)
+        XCTAssertNotNil(sut.walletData)
         XCTAssertNotNil(sut.fiatWalletData)
     }
 }
