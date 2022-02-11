@@ -9,7 +9,7 @@ import UIKit
 
 class CriptosViewController: UIViewController {
     private let cellId = "criptoCell"
-    private var viewModel: CriptosViewModelProtocol
+    private let viewModel: CriptosViewModelProtocol
     private lazy var tableview: UITableView = {
         let tableView = UITableView()
         tableView.register(CriptoTableViewCell.self, forCellReuseIdentifier: cellId)
@@ -43,6 +43,7 @@ class CriptosViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Cryptos"
+        viewModel.view = self
         addViews()
     }
     
@@ -91,6 +92,15 @@ private extension CriptosViewController {
     
     @objc func segmentedValueChanged(_ sender:UISegmentedControl!)
     {
-        
+        switch sender.selectedSegmentIndex {
+        case 1:
+            viewModel.fetchData(filter: .cryptocoin)
+        case 2:
+            viewModel.fetchData(filter: .commodity)
+        case 3:
+            viewModel.fetchData(filter: .fiat)
+        default:
+            viewModel.fetchData(filter: nil)
+        }
     }
 }

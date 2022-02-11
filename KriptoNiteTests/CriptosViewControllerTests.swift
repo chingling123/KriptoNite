@@ -10,10 +10,10 @@ import XCTest
 
 class CriptosViewControllerTests: XCTestCase {
     var sut: CriptosViewController!
-    var vm: ViewModelMock!
+    var vm: MasterDataViewModel!
     
     override func setUpWithError() throws {
-        vm = ViewModelMock()
+        vm = MasterDataViewModel()
         sut = CriptosViewController(vm: vm)
     }
 
@@ -23,6 +23,6 @@ class CriptosViewControllerTests: XCTestCase {
 
     func testViewWillAppearDataFetched() throws {
         sut.viewWillAppear(true)
-        XCTAssertTrue(vm.dataFetched)
+        XCTAssertNotNil(vm.data)
     }
 }

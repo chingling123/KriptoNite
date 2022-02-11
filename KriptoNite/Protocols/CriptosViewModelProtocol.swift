@@ -7,7 +7,8 @@
 
 import Foundation
 
-protocol CriptosViewModelProtocol {
+protocol CriptosViewModelProtocol: AnyObject {
+    var view: CriptosViewProtocol? { get set }
     var data: [CriptoModel]? { get }
     func fetchData(filter: AttributesType?)
 }

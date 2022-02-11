@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol CriptosViewProtocol {
+protocol CriptosViewProtocol: AnyObject {
     func refresh()
 }

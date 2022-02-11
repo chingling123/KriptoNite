@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SDImageCodersManager.shared.addCoder(SVGCoder)
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = CriptosViewController(vm: MasterDataViewModel())
+        let vm = MasterDataViewModel()
+        let viewController = CriptosViewController(vm: vm)
         let navigation = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()

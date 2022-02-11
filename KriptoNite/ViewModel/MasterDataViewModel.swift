@@ -8,6 +8,7 @@
 import Foundation
 
 class MasterDataViewModel {
+    weak var view: CriptosViewProtocol?
     private var masterData: MasterDataModel?
     private var filter: AttributesType?
     
@@ -45,5 +46,6 @@ extension MasterDataViewModel: CriptosViewModelProtocol {
     func fetchData(filter: AttributesType?) {
         self.filter = filter
         fetch()
+        view?.refresh()
     }
 }
