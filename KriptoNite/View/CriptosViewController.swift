@@ -55,12 +55,12 @@ class CriptosViewController: UIViewController {
 
 extension CriptosViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.data?.count ?? 0
+        return viewModel.criptoData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CriptoTableViewCell else { return UITableViewCell() }
-        guard let data = viewModel.data?[indexPath.row] else { return UITableViewCell() }
+        guard let data = viewModel.criptoData?[indexPath.row] else { return UITableViewCell() }
         cell.configureView(data: data)
         return cell
     }

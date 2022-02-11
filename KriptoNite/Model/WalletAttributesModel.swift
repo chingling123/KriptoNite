@@ -14,4 +14,5 @@ struct WalletAttributesModel: Codable {
     var name: String
     var pendingTransactionsCount: Int
     var deleted: Bool
+    var balance: String
 }

@@ -23,20 +23,20 @@ class CriptosViewControllerTests: XCTestCase {
 
     func testViewWillAppearDataFetched() throws {
         sut.viewWillAppear(true)
-        XCTAssertNotNil(vm.data)
+        XCTAssertNotNil(vm.criptoData)
     }
     
     func testFilterData() throws {
         sut.viewDidLoad()
         sut.viewWillAppear(true)
-        guard let hasData = vm.data else {
+        guard let hasData = vm.criptoData else {
             XCTFail("Data shouldn't be empty")
             return
         }
         
         let fiatCounter = hasData.filter { $0.type == .fiat }.count
         vm.fetchData(filter: .fiat)
-        let filterCounter = vm.data?.map { $0.type == .fiat }.count
+        let filterCounter = vm.criptoData?.map { $0.type == .fiat }.count
         
         XCTAssertTrue(fiatCounter == filterCounter)
     }

@@ -9,6 +9,8 @@ import Foundation
 
 protocol CriptosViewModelProtocol: AnyObject {
     var view: CriptosViewProtocol? { get set }
-    var data: [CriptoModel]? { get }
+    var criptoData: [CriptoModel]? { get }
+    var commonWalletData: [WalletModel]? { get }
+    var fiatWalletData: [FiatWalletModel]? { get }
     func fetchData(filter: AttributesType?)
 }

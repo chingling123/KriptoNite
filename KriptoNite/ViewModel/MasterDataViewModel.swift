@@ -25,7 +25,7 @@ class MasterDataViewModel {
 }
 
 extension MasterDataViewModel: CriptosViewModelProtocol {
-    var data: [CriptoModel]? {
+    var criptoData: [CriptoModel]? {
         guard let hasData = masterData else { return nil }
         if filter != nil {
             switch filter {
@@ -41,6 +41,17 @@ extension MasterDataViewModel: CriptosViewModelProtocol {
         } else {
             return hasData.mainData.attributes.cryptocoins + hasData.mainData.attributes.commodities + hasData.mainData.attributes.fiats.filter { $0.attributes.hasWallets == true }
         }
+    }
+    
+    var commonWalletData: [WalletModel]? {
+        guard let hasData = masterData else { return nil }
+        return  hasData.mainData.attributes.wallets.filter { $0.attributes.deleted == false }.sorted { $0.attributes.balance > $1.attributes.balance } +
+                hasData.mainData.attributes.commodityWallets.filter { $0.attributes.deleted == false }.sorted { $0.attributes.balance > $1.attributes.balance }
+    }
+    
+    var fiatWalletData: [FiatWalletModel]? {
+        guard let hasData = masterData else { return nil }
+        return hasData.mainData.attributes.fiatwallets.sorted { $0.attributes.balance > $1.attributes.balance }
     }
     
     func fetchData(filter: AttributesType?) {
