@@ -73,18 +73,16 @@ extension CriptosViewController: CriptosViewProtocol {
 
 private extension CriptosViewController {
     func addViews() {
-        view.addSubview(segmentedTypes)
+        tableview.tableHeaderView = segmentedTypes
         view.addSubview(tableview)
         makeConstraints()
     }
     
     func makeConstraints() {
-        segmentedTypes.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        segmentedTypes.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
-        segmentedTypes.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
+        segmentedTypes.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
         segmentedTypes.heightAnchor.constraint(equalToConstant: 30).isActive = true
         tableview.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        tableview.topAnchor.constraint(equalTo: segmentedTypes.bottomAnchor, constant: 10).isActive = true
+        tableview.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         tableview.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
