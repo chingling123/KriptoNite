@@ -9,6 +9,7 @@ import UIKit
 
 class WalletViewController: UIViewController {
     private let viewModel: WalletsViewModelProtocol
+    private let coordinator: WalletsCoordinator?
     private lazy var tableview: UITableView = {
         let tableView = UITableView()
         tableView.register(WalletsTableViewCell.self, forCellReuseIdentifier: WalletsTableViewCell.cellId)
@@ -16,14 +17,14 @@ class WalletViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        tableView.allowsSelection = false
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 84
        return tableView
     }()
     
-    init(vm: WalletsViewModelProtocol) {
-        viewModel = vm
+    init(vm: WalletsViewModelProtocol, coordinator: WalletsCoordinator) {
+        self.viewModel = vm
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -54,6 +55,11 @@ extension WalletViewController: UITableViewDelegate, UITableViewDataSource {
         let data = viewModel.walletList()[indexPath.row]
         cell.configureView(data: data)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = viewModel.walletList()[indexPath.row]
+        coordinator?.start(type: data)
     }
 }
 

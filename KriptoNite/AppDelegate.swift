@@ -20,9 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
 //        let vm = CriptosDataViewModel()
 //        let viewController = CriptosViewController(vm: vm)
-        let vm = WalletsDataViewModel()
-        let viewController = WalletViewController(vm: vm)
-        let navigation = UINavigationController(rootViewController: viewController)
+//        let vm = WalletsDataViewModel()
+//        let viewController = WalletViewController(vm: vm)
+//        let navigation = UINavigationController(rootViewController: viewController)
+        let navigation = UINavigationController()
+        let coordinator = WalletsCoordinator(navigationController: navigation)
+        coordinator.start()
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
         
