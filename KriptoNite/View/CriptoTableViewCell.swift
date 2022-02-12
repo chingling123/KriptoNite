@@ -8,7 +8,8 @@
 import UIKit
 
 class CriptoTableViewCell: UITableViewCell {
-    private let nameLabel: UILabel = {
+    public static let cellId = "criptoCell"
+    private lazy var nameLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.textColor = UIColor(named: "generalLabel")
@@ -16,7 +17,7 @@ class CriptoTableViewCell: UITableViewCell {
         lbl.textAlignment = .left
         return lbl
     }()
-    private let symbolLabel: UILabel = {
+    private lazy var symbolLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.textColor = UIColor(named: "generalLabel")
@@ -24,26 +25,26 @@ class CriptoTableViewCell: UITableViewCell {
         lbl.textAlignment = .left
         return lbl
     }()
-    private let averagePriceLabel: UILabel = {
+    private lazy var averagePriceLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.font = UIFont.boldSystemFont(ofSize: 16)
         lbl.textAlignment = .right
         return lbl
     }()
-    private let typeLabel: UILabel = {
+    private lazy var typeLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.backgroundColor = UIColor(named: "generalLabel")
         return lbl
     }()
-    private let icon: UIImageView = {
+    private lazy var icon: UIImageView = {
         let ic = UIImageView()
         ic.translatesAutoresizingMaskIntoConstraints = false
         ic.contentMode = .scaleAspectFill
         return ic
     }()
-    private let viewContainer: UIView = {
+    private lazy var viewContainer: UIView = {
         let view = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = UIColor(named: "cellBackground")
@@ -69,17 +70,7 @@ class CriptoTableViewCell: UITableViewCell {
         } else {
             icon.sd_setImage(with: URL(string: data.attributes.logo))
         }
-        
-        switch data.type {
-        case .commodity:
-            typeLabel.backgroundColor = UIColor(named: "commodity")
-        case .cryptocoin:
-            typeLabel.backgroundColor = UIColor(named: "cryptocoin")
-        case .fiat:
-            typeLabel.backgroundColor = UIColor(named: "fiat")
-        default:
-            typeLabel.backgroundColor = UIColor(named: "generalLabel")
-        }
+        typeLabel.backgroundColor = data.type.color
     }
     
     private func addViews() {

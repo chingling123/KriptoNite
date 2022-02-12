@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum AttributesType: String, Codable {
     case cryptocoin
@@ -13,6 +14,19 @@ enum AttributesType: String, Codable {
     case fiat
     case wallet
     case fiatWallet = "fiat_wallet"
+    
+    var color: UIColor {
+        switch self {
+        case .fiat:
+            return UIColor(named: "fiat") ?? .yellow
+        case .cryptocoin:
+            return UIColor(named: "cryptocoin") ?? .green
+        case .commodity:
+            return UIColor(named: "commodity") ?? .cyan
+        default:
+            return UIColor(named: "generalLabel") ?? .systemBackground
+        }
+    }
 }
 struct AttributesModel: Codable {
     var cryptocoins: [CriptoModel]

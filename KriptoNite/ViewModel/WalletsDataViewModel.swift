@@ -6,11 +6,27 @@
 //
 
 import Foundation
+import UIKit
+
+enum WalletsType: String, CaseIterable {
+    case fiat = "Fiat"
+    case crypto = "Crypto"
+    case commodity = "Commodity"
+    
+    var color: UIColor {
+        switch self {
+        case .fiat:
+            return UIColor(named: "fiat") ?? .yellow
+        case .crypto:
+            return UIColor(named: "cryptocoin") ?? .green
+        case .commodity:
+            return UIColor(named: "commodity") ?? .cyan
+        }
+    }
+}
 
 class WalletsDataViewModel {
-    weak var view: WalletsViewProtocol?
     private var masterData: MasterDataModel?
-    private var filter: AttributesType?
     
     private func fetch() {
         DataFetcher.fetch { [weak self] resultData in
@@ -34,9 +50,12 @@ extension WalletsDataViewModel: WalletsViewModelProtocol {
         guard let hasData = masterData else { return nil }
         return hasData.mainData.attributes.fiatwallets.sorted { $0.attributes.balance > $1.attributes.balance }
     }
-    func fetchData(filter: AttributesType?) {
-        self.filter = filter
+    
+    func fetchData() {
         fetch()
-        view?.refresh()
+    }
+    
+    func walletList() -> [WalletsType] {
+        return WalletsType.allCases
     }
 }

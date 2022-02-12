@@ -8,11 +8,10 @@
 import UIKit
 
 class CriptosViewController: UIViewController {
-    private let cellId = "criptoCell"
     private let viewModel: CriptosViewModelProtocol
     private lazy var tableview: UITableView = {
         let tableView = UITableView()
-        tableView.register(CriptoTableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(CriptoTableViewCell.self, forCellReuseIdentifier: CriptoTableViewCell.cellId)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
@@ -59,7 +58,7 @@ extension CriptosViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CriptoTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CriptoTableViewCell.cellId, for: indexPath) as? CriptoTableViewCell else { return UITableViewCell() }
         guard let data = viewModel.criptoData?[indexPath.row] else { return UITableViewCell() }
         cell.configureView(data: data)
         return cell

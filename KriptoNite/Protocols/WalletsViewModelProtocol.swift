@@ -9,9 +9,9 @@ import Foundation
 
 
 protocol WalletsViewModelProtocol: AnyObject {
-    var view: WalletsViewProtocol? { get set }
     var commodityWalletData: [WalletModel]? { get }
     var walletData: [WalletModel]? { get }
     var fiatWalletData: [FiatWalletModel]? { get }
-    func fetchData(filter: AttributesType?)
+    func fetchData()
+    func walletList() -> [WalletsType]
 }

@@ -31,11 +31,11 @@
 		7520312F27B5C17B00540462 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 7520312E27B5C17B00540462 /* SDWebImageSVGCoder */; };
 		7520313327B5CBF600540462 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520313227B5CBF600540462 /* String+Extensions.swift */; };
 		7567C23327B8137C00531E93 /* WalletsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7567C23227B8137C00531E93 /* WalletsViewModelProtocol.swift */; };
-		7567C23527B8146800531E93 /* WalletsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7567C23427B8146800531E93 /* WalletsViewProtocol.swift */; };
 		75D626EC27B81BEB009EF614 /* WalletsDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626EB27B81BEB009EF614 /* WalletsDataViewModel.swift */; };
 		75D626EE27B81CC6009EF614 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626ED27B81CC6009EF614 /* DataFetcher.swift */; };
 		75D626F027B81E15009EF614 /* WalletsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626EF27B81E15009EF614 /* WalletsTests.swift */; };
 		75D626F227B848D9009EF614 /* KryptoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626F127B848D9009EF614 /* KryptoView.swift */; };
+		75D626F427B854F5009EF614 /* WalletsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626F327B854F5009EF614 /* WalletsTableViewCell.swift */; };
 		75EC7C0827B6D702003D2DFA /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EC7C0727B6D702003D2DFA /* WalletViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,11 +75,11 @@
 		7520312527B5B8D800540462 /* CriptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoTableViewCell.swift; sourceTree = "<group>"; };
 		7520313227B5CBF600540462 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		7567C23227B8137C00531E93 /* WalletsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewModelProtocol.swift; sourceTree = "<group>"; };
-		7567C23427B8146800531E93 /* WalletsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewProtocol.swift; sourceTree = "<group>"; };
 		75D626EB27B81BEB009EF614 /* WalletsDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsDataViewModel.swift; sourceTree = "<group>"; };
 		75D626ED27B81CC6009EF614 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		75D626EF27B81E15009EF614 /* WalletsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsTests.swift; sourceTree = "<group>"; };
 		75D626F127B848D9009EF614 /* KryptoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KryptoView.swift; sourceTree = "<group>"; };
+		75D626F327B854F5009EF614 /* WalletsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsTableViewCell.swift; sourceTree = "<group>"; };
 		75EC7C0727B6D702003D2DFA /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +188,7 @@
 				7520312527B5B8D800540462 /* CriptoTableViewCell.swift */,
 				75EC7C0727B6D702003D2DFA /* WalletViewController.swift */,
 				75D626F127B848D9009EF614 /* KryptoView.swift */,
+				75D626F327B854F5009EF614 /* WalletsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,7 +199,6 @@
 				7520311C27B5A59300540462 /* CriptosViewProtocol.swift */,
 				7520311E27B5A5D500540462 /* CriptosViewModelProtocol.swift */,
 				7567C23227B8137C00531E93 /* WalletsViewModelProtocol.swift */,
-				7567C23427B8146800531E93 /* WalletsViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -328,7 +328,6 @@
 				7520311F27B5A5D500540462 /* CriptosViewModelProtocol.swift in Sources */,
 				7520310727B5791D00540462 /* CriptoModel.swift in Sources */,
 				7520312627B5B8D800540462 /* CriptoTableViewCell.swift in Sources */,
-				7567C23527B8146800531E93 /* WalletsViewProtocol.swift in Sources */,
 				75D626F227B848D9009EF614 /* KryptoView.swift in Sources */,
 				7520311527B5832400540462 /* FiatWalletAttributesModel.swift in Sources */,
 				7520310327B5773400540462 /* MainDataModel.swift in Sources */,
@@ -341,6 +340,7 @@
 				7520311727B5835900540462 /* FiatWalletModel.swift in Sources */,
 				7520311D27B5A59300540462 /* CriptosViewProtocol.swift in Sources */,
 				7567C23327B8137C00531E93 /* WalletsViewModelProtocol.swift in Sources */,
+				75D626F427B854F5009EF614 /* WalletsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
