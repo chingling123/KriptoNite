@@ -10,10 +10,10 @@ import XCTest
 
 class CriptosViewControllerTests: XCTestCase {
     var sut: CriptosViewController!
-    var vm: MasterDataViewModel!
+    var vm: CriptosDataViewModel!
     
     override func setUpWithError() throws {
-        vm = MasterDataViewModel()
+        vm = CriptosDataViewModel()
         sut = CriptosViewController(vm: vm)
     }
 

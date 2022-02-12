@@ -10,11 +10,11 @@ import XCTest
 
 class KriptoNiteTests: XCTestCase {
     var data: Data?
-    var sut: MasterDataViewModel!
+    var sut: CriptosDataViewModel!
         
     override func setUpWithError() throws {
         data = FileLoader.loadData()
-        sut = MasterDataViewModel()
+        sut = CriptosDataViewModel()
     }
 
     override func tearDownWithError() throws {
@@ -57,12 +57,5 @@ class KriptoNiteTests: XCTestCase {
         XCTAssertNotNil(sut.criptoData)
         data = sut.criptoData
         XCTAssertTrue(data?[0].type == .commodity)
-    }
-    
-    func testViewModelMasterDataWallets() throws {
-        sut.fetchData(filter: nil)
-        XCTAssertNotNil(sut.commodityWalletData)
-        XCTAssertNotNil(sut.walletData)
-        XCTAssertNotNil(sut.fiatWalletData)
     }
 }
