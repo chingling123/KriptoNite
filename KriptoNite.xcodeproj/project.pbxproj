@@ -38,6 +38,7 @@
 		75D626F427B854F5009EF614 /* WalletsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626F327B854F5009EF614 /* WalletsTableViewCell.swift */; };
 		75D626F727B857B4009EF614 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626F627B857B4009EF614 /* Coordinator.swift */; };
 		75D626F927B857D2009EF614 /* WalletsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626F827B857D2009EF614 /* WalletsCoordinator.swift */; };
+		75D626FE27B85D4B009EF614 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626FD27B85D4B009EF614 /* HomeViewController.swift */; };
 		75EC7C0827B6D702003D2DFA /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EC7C0727B6D702003D2DFA /* WalletViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		75D626F327B854F5009EF614 /* WalletsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsTableViewCell.swift; sourceTree = "<group>"; };
 		75D626F627B857B4009EF614 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		75D626F827B857D2009EF614 /* WalletsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsCoordinator.swift; sourceTree = "<group>"; };
+		75D626FD27B85D4B009EF614 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		75EC7C0727B6D702003D2DFA /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,11 +191,9 @@
 		7520311827B5870E00540462 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				752030CA27B563C000540462 /* CriptosViewController.swift */,
-				7520312527B5B8D800540462 /* CriptoTableViewCell.swift */,
-				75EC7C0727B6D702003D2DFA /* WalletViewController.swift */,
-				75D626F127B848D9009EF614 /* KryptoView.swift */,
-				75D626F327B854F5009EF614 /* WalletsTableViewCell.swift */,
+				75D626FC27B85D3D009EF614 /* Home */,
+				75D626FB27B85D31009EF614 /* Wallets */,
+				75D626FA27B85D26009EF614 /* Criptos */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +223,33 @@
 				75D626F827B857D2009EF614 /* WalletsCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		75D626FA27B85D26009EF614 /* Criptos */ = {
+			isa = PBXGroup;
+			children = (
+				752030CA27B563C000540462 /* CriptosViewController.swift */,
+				7520312527B5B8D800540462 /* CriptoTableViewCell.swift */,
+			);
+			path = Criptos;
+			sourceTree = "<group>";
+		};
+		75D626FB27B85D31009EF614 /* Wallets */ = {
+			isa = PBXGroup;
+			children = (
+				75EC7C0727B6D702003D2DFA /* WalletViewController.swift */,
+				75D626F127B848D9009EF614 /* KryptoView.swift */,
+				75D626F327B854F5009EF614 /* WalletsTableViewCell.swift */,
+			);
+			path = Wallets;
+			sourceTree = "<group>";
+		};
+		75D626FC27B85D3D009EF614 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				75D626FD27B85D4B009EF614 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +370,7 @@
 				75D626F927B857D2009EF614 /* WalletsCoordinator.swift in Sources */,
 				7520311F27B5A5D500540462 /* CriptosViewModelProtocol.swift in Sources */,
 				7520310727B5791D00540462 /* CriptoModel.swift in Sources */,
+				75D626FE27B85D4B009EF614 /* HomeViewController.swift in Sources */,
 				7520312627B5B8D800540462 /* CriptoTableViewCell.swift in Sources */,
 				75D626F227B848D9009EF614 /* KryptoView.swift in Sources */,
 				7520311527B5832400540462 /* FiatWalletAttributesModel.swift in Sources */,

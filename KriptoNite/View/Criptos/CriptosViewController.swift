@@ -41,13 +41,13 @@ class CriptosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        title = "Cryptos"
         viewModel.view = self
         addViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tabBarController?.title = "Cryptos"
         viewModel.fetchData(filter: nil)
     }
 }
