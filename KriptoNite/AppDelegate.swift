@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SDImageCodersManager.shared.addCoder(SVGCoder)
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let vm = CriptosDataViewModel()
+//        let vm = CriptosDataViewModel()
 //        let viewController = CriptosViewController(vm: vm)
         let viewController = WalletViewController()
         let navigation = UINavigationController(rootViewController: viewController)
@@ -28,4 +28,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-
