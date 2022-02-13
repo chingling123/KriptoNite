@@ -50,6 +50,18 @@ class CommonWalletCollectionViewCell: UICollectionViewCell {
         ic.isHidden = true
         return ic
     }()
+    private lazy var titleLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textColor = UIColor(named: "generalLabel")
+        lbl.font = UIFont.systemFont(ofSize: 14)
+        lbl.textAlignment = .center
+        lbl.text = "Current Balance"
+        lbl.layer.cornerRadius = 5
+        lbl.layer.masksToBounds = true
+        lbl.backgroundColor = UIColor(named: "labelBackground")
+        return lbl
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -88,6 +100,7 @@ private extension CommonWalletCollectionViewCell {
         viewContainer.addSubview(balanceLabel)
         viewContainer.addSubview(icon)
         viewContainer.addSubview(iconDefault)
+        viewContainer.addSubview(titleLabel)
         makeConstraints()
     }
     
@@ -103,8 +116,12 @@ private extension CommonWalletCollectionViewCell {
         icon.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10).isActive = true
         icon.heightAnchor.constraint(equalToConstant: 75).isActive = true
         icon.widthAnchor.constraint(equalToConstant: 75).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: icon.centerXAnchor).isActive = true
+        titleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        titleLabel.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 12).isActive = true
         balanceLabel.centerXAnchor.constraint(equalTo: icon.centerXAnchor).isActive = true
-        balanceLabel.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 10).isActive = true
+        balanceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
         balanceLabel.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor, constant: -10).isActive = true
         iconDefault.heightAnchor.constraint(equalToConstant: 25).isActive = true
         iconDefault.widthAnchor.constraint(equalToConstant: 25).isActive = true
