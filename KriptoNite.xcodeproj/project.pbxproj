@@ -34,7 +34,6 @@
 		75D626EC27B81BEB009EF614 /* WalletsDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626EB27B81BEB009EF614 /* WalletsDataViewModel.swift */; };
 		75D626EE27B81CC6009EF614 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626ED27B81CC6009EF614 /* DataFetcher.swift */; };
 		75D626F027B81E15009EF614 /* WalletsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626EF27B81E15009EF614 /* WalletsTests.swift */; };
-		75D626F227B848D9009EF614 /* KryptoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626F127B848D9009EF614 /* KryptoView.swift */; };
 		75D626F427B854F5009EF614 /* WalletsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626F327B854F5009EF614 /* WalletsTableViewCell.swift */; };
 		75D626F727B857B4009EF614 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626F627B857B4009EF614 /* Coordinator.swift */; };
 		75D626F927B857D2009EF614 /* WalletsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D626F827B857D2009EF614 /* WalletsCoordinator.swift */; };
@@ -85,7 +84,6 @@
 		75D626EB27B81BEB009EF614 /* WalletsDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsDataViewModel.swift; sourceTree = "<group>"; };
 		75D626ED27B81CC6009EF614 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		75D626EF27B81E15009EF614 /* WalletsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsTests.swift; sourceTree = "<group>"; };
-		75D626F127B848D9009EF614 /* KryptoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KryptoView.swift; sourceTree = "<group>"; };
 		75D626F327B854F5009EF614 /* WalletsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsTableViewCell.swift; sourceTree = "<group>"; };
 		75D626F627B857B4009EF614 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		75D626F827B857D2009EF614 /* WalletsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsCoordinator.swift; sourceTree = "<group>"; };
@@ -247,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				75EC7C0727B6D702003D2DFA /* WalletViewController.swift */,
-				75D626F127B848D9009EF614 /* KryptoView.swift */,
 				75D626F327B854F5009EF614 /* WalletsTableViewCell.swift */,
 				75D626FF27B92F31009EF614 /* WalletDetailsViewController.swift */,
 				75D6270127B93710009EF614 /* CommonWalletCollectionViewCell.swift */,
@@ -387,7 +384,6 @@
 				75D626FE27B85D4B009EF614 /* HomeViewController.swift in Sources */,
 				75D6270227B93710009EF614 /* CommonWalletCollectionViewCell.swift in Sources */,
 				7520312627B5B8D800540462 /* CriptoTableViewCell.swift in Sources */,
-				75D626F227B848D9009EF614 /* KryptoView.swift in Sources */,
 				7520311527B5832400540462 /* FiatWalletAttributesModel.swift in Sources */,
 				7520310327B5773400540462 /* MainDataModel.swift in Sources */,
 				7520311327B5822B00540462 /* WalletAttributesModel.swift in Sources */,
