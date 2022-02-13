@@ -19,10 +19,9 @@ class WalletsCoordinator: Coordinator {
         self.navigationController.pushViewController(viewController, animated: true)
     }
     
-    func start(type: WalletsType) {
-        let viewController = UIViewController()
-        viewController.title = type.rawValue
+    func start(detailsData: [CommonWalletModel], type: WalletsType) {
+        let viewController = WalletDetailsViewController(data: detailsData, type: type.rawValue)
         viewController.view.backgroundColor = .systemBackground
-        self.navigationController.present(viewController, animated: true)
+        self.navigationController.pushViewController(viewController, animated: true)
     }
 }

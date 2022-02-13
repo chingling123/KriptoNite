@@ -15,6 +15,8 @@ class HomeViewController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UITabBar.appearance().tintColor = UIColor(named: "generalLabel")
+        
         let vmCriptos = CriptosDataViewModel()
         let criptosViewController = CriptosViewController(vm: vmCriptos)
         let criptosTabBarItem = UITabBarItem(title: "Cryptos", image: UIImage(systemName: "list.bullet.rectangle"), tag: 0)

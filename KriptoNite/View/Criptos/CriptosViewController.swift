@@ -13,8 +13,8 @@ class CriptosViewController: UIViewController {
         let tableView = UITableView()
         tableView.register(CriptoTableViewCell.self, forCellReuseIdentifier: CriptoTableViewCell.cellId)
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.delegate = self
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.rowHeight = UITableView.automaticDimension
@@ -52,7 +52,7 @@ class CriptosViewController: UIViewController {
     }
 }
 
-extension CriptosViewController: UITableViewDelegate, UITableViewDataSource {
+extension CriptosViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.criptoData?.count ?? 0
     }
@@ -62,6 +62,13 @@ extension CriptosViewController: UITableViewDelegate, UITableViewDataSource {
         guard let data = viewModel.criptoData?[indexPath.row] else { return UITableViewCell() }
         cell.configureView(data: data)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.frame.origin.x = -cell.frame.width
+        UIView.animate(withDuration: 0.7, delay: 0.2, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .allowUserInteraction, animations: {
+            cell.frame.origin.x = 0
+        }, completion: nil)
     }
 }
 

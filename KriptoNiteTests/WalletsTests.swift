@@ -25,28 +25,8 @@ class WalletsTests: XCTestCase {
     func testLoadMasterData() throws {
         XCTAssertNotNil(data)
     }
-    
-    func testLoadMasterDataFromLocalFile() throws {
-        sut.fetchData()
-        XCTAssertNotNil(sut.walletData)
-    }
-    
+
     func testLoadMasterDataFromLocaFileToModel() throws {
-        sut.fetchData()
-        XCTAssertNotNil(sut.walletData)
-    }
-
-    func testViewModelMasterDataAttributes() throws {
-        sut.fetchData()
-        XCTAssertNotNil(sut.walletData)
-        let data = sut.walletData
-        XCTAssertNotNil(data?[0].attributes)
-    }
-
-    func testViewModelMasterDataWallets() throws {
-        sut.fetchData()
-        XCTAssertNotNil(sut.commodityWalletData)
-        XCTAssertNotNil(sut.walletData)
-        XCTAssertNotNil(sut.fiatWalletData)
+        XCTAssertNotNil(sut.fetchData(by: .fiat))
     }
 }

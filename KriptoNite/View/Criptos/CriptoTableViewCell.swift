@@ -50,11 +50,15 @@ class CriptoTableViewCell: UITableViewCell {
         view.backgroundColor = UIColor(named: "cellBackground")
         return view
     }()
+    private lazy var placeholderImage: UIImage? = {
+        let img = UIImage(systemName: "photo.circle")?.withRenderingMode(.alwaysTemplate)
+            .withTintColor(UIColor(named: "generalLabel") ?? .systemBackground)
+        return img
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addViews()
-        makeConstraints()
+        commonInit()
     }
 
     required init?(coder _: NSCoder) {
@@ -66,14 +70,21 @@ class CriptoTableViewCell: UITableViewCell {
         symbolLabel.text = data.attributes.symbol
         averagePriceLabel.text = data.attributes.avgPrice?.currencyFormat(maximumFractionDigits: data.attributes.precisionForFiatPrice ?? 2)
         if  UITraitCollection.current.userInterfaceStyle == .dark {
-            icon.sd_setImage(with: URL(string: data.attributes.logoDark))
+            icon.sd_setImage(with: URL(string: data.attributes.logoDark), placeholderImage: placeholderImage)
         } else {
-            icon.sd_setImage(with: URL(string: data.attributes.logo))
+            icon.sd_setImage(with: URL(string: data.attributes.logo), placeholderImage: placeholderImage)
         }
         typeLabel.backgroundColor = data.type.color
     }
+}
+
+private extension CriptoTableViewCell {
+    func commonInit() {
+        addViews()
+        makeConstraints()
+    }
     
-    private func addViews() {
+    func addViews() {
         contentView.addSubview(viewContainer)
         viewContainer.addSubview(nameLabel)
         viewContainer.addSubview(symbolLabel)
@@ -83,7 +94,7 @@ class CriptoTableViewCell: UITableViewCell {
         makeConstraints()
     }
     
-    private func makeConstraints() {
+    func makeConstraints() {
         viewContainer.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10).isActive = true
         viewContainer.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5).isActive = true
         viewContainer.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10).isActive = true

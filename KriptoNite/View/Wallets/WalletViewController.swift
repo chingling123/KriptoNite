@@ -41,25 +41,25 @@ class WalletViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.title = "Wallets"
-        viewModel.fetchData()
     }
 }
 
 extension WalletViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.walletList().count
+        return viewModel.walletListTypes().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: WalletsTableViewCell.cellId, for: indexPath) as? WalletsTableViewCell else { return UITableViewCell() }
-        let data = viewModel.walletList()[indexPath.row]
+        let data = viewModel.walletListTypes()[indexPath.row]
         cell.configureView(data: data)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = viewModel.walletList()[indexPath.row]
-        coordinator?.start(type: data)
+        let type = viewModel.walletListTypes()[indexPath.row]
+        guard let data = viewModel.fetchData(by: type) else { return }
+        coordinator?.start(detailsData: data, type: type)
     }
 }
 
