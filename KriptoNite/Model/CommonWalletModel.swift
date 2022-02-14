@@ -14,7 +14,7 @@ struct CommonWalletModel {
     var symbol: String
     var logoDark: String?
     var logo: String?
-    var balance: String
+    var balance: Float
     var isDefault: Bool
     var type: AttributesType
     var color: UIColor

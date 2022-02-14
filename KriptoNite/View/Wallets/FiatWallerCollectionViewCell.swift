@@ -61,7 +61,7 @@ class FiatWallerCollectionViewCell: UICollectionViewCell {
         } else {
             icon.sd_setImage(with: URL(string: data.logo ?? ""), placeholderImage: placeholderImage)
         }
-        balanceLabel.text = data.balance.currencyFormat(maximumFractionDigits: 2, currencyCode: data.symbol)
+        balanceLabel.text = data.balance.humberFormat(maximumFractionDigits: 2, currencyCode: data.symbol)
     }
 }
 

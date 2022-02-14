@@ -79,7 +79,7 @@ class CommonWalletCollectionViewCell: UICollectionViewCell {
         } else {
             icon.sd_setImage(with: URL(string: data.logo ?? ""), placeholderImage: placeholderImage)
         }
-        balanceLabel.text = data.balance
+        balanceLabel.text = data.balance.humberFormat()
         if data.isDefault {
             iconDefault.isHidden = false
         } else {
