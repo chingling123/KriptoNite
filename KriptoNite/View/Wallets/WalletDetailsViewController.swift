@@ -63,13 +63,6 @@ extension WalletDetailsViewController: UICollectionViewDataSource, UICollectionV
         }
         return UICollectionViewCell()
     }
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        cell.frame.origin.x = -cell.frame.width
-        UIView.animate(withDuration: 0.7, delay: 0.2, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .allowUserInteraction, animations: {
-            cell.frame.origin.x = 0
-        }, completion: nil)
-    }
 }
 
 private extension WalletDetailsViewController {

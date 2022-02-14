@@ -105,7 +105,7 @@ private extension CommonWalletCollectionViewCell {
     }
     
     func makeConstraints() {
-        viewContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+        viewContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width/2 - CGFloat(10)).isActive = true
         viewContainer.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
         viewContainer.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         viewContainer.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
@@ -126,5 +126,5 @@ private extension CommonWalletCollectionViewCell {
         iconDefault.heightAnchor.constraint(equalToConstant: 25).isActive = true
         iconDefault.widthAnchor.constraint(equalToConstant: 25).isActive = true
         iconDefault.leftAnchor.constraint(equalTo: viewContainer.leftAnchor, constant: 10).isActive = true
-        iconDefault.bottomAnchor.constraint(equalTo: balanceLabel.bottomAnchor).isActive = true
+        iconDefault.topAnchor.constraint(equalTo: viewContainer.topAnchor, constant: 10).isActive = true
     }}
